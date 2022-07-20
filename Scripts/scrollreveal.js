@@ -1,9 +1,9 @@
 
+
 ScrollReveal({
-    reset: true,
-    distance: "200px",
-    delay: 100,
-    duration: 1000
+    reset: false,
+    distance: "30px",
+    duration: 500
 });
 
 ScrollReveal().reveal(".main_header--slogan", { origin: "left" });
