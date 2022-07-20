@@ -1,9 +1,11 @@
 
 
+
 ScrollReveal({
     reset: false,
-    distance: "100px",
-    duration: 1000
+    distance: "50px",
+    delay: "100",
+    duration: 500
 });
 
 ScrollReveal().reveal(".about_us--title", { origin: "top" });
