@@ -3,12 +3,8 @@
 ScrollReveal({
     reset: false,
     distance: "30px",
-    duration: 500
+    duration: 1000
 });
-
-ScrollReveal().reveal(".main_header--slogan", { origin: "left" });
-ScrollReveal().reveal(".main_header--blob", { origin: "right" });
-ScrollReveal().reveal(".main_header--image", { origin: "bottom" });
 
 ScrollReveal().reveal(".about_us--title", { origin: "top" });
 ScrollReveal().reveal(".about_us--blob", { origin: "left" });
