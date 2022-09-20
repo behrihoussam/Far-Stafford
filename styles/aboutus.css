@@ -1,0 +1,562 @@
+.main_header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  background-image: url("../Images/pexels-fauxels-3184405.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.main_header--title {
+  position: relative;
+  width: 60%;
+  font-weight: 700;
+  font-size: 4rem;
+  animation: title_animation 5s ease-out infinite forwards;
+}
+
+.we_are {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.we_are .skewed {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 0%, 0.1);
+  z-index: 0;
+  transform: skewY(12deg);
+  transform-origin: top right;
+  border-radius: 0;
+}
+
+.we_are--title,
+.mission--title,
+.vision--title,
+.responsibility--title {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #23225a;
+  background: -webkit-linear-gradient(#23225a, #9a222f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.we_are--description {
+  position: relative;
+  width: 70%;
+  font-size: 1.5rem;
+}
+
+.we_are--items {
+  position: relative;
+  width: 100%;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  gap: 1rem;
+}
+
+.we_are--image {
+  position: relative;
+  width: 50%;
+  filter: grayscale(1);
+  transition: filter 0.3s ease-out;
+}
+
+.we_are--items:hover .we_are--image {
+  filter: grayscale(0);
+}
+
+.we_are--catchline {
+  position: relative;
+  width: 40%;
+}
+
+.mission {
+  position: relative;
+  width: 100%;
+}
+
+.mission_section--image {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  place-items: center;
+  background: hsla(0, 0%, 0%, 0.1);
+  backdrop-filter: blur(10px);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.mission_section--image .blob {
+  position: absolute;
+  width: 20%;
+  right: -10%;
+}
+
+.mission_section--image .blob2 {
+  position: absolute;
+  width: 20%;
+  bottom: 70%;
+  transform: rotate(-90deg);
+}
+
+.mission_section--title {
+  position: relative;
+  width: 70%;
+  margin-left: 2rem;
+  font-size: 2rem;
+  animation: title_animation 5s ease-out infinite forwards;
+}
+
+.vision {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  gap: 1rem;
+}
+
+.vision_items {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  place-content: center;
+  place-items: center;
+  gap: 1rem;
+}
+
+.vision_image {
+  position: relative;
+  width: 40%;
+  filter: grayscale(1);
+  transition: filter 0.3s ease-out;
+}
+
+.vision:hover .vision_image {
+  filter: grayscale(0);
+}
+
+.vision_description {
+  position: relative;
+  width: 50%;
+  font-size: 1.5rem;
+}
+
+.values {
+  position: relative;
+  width: 100%;
+}
+
+.values_items {
+  position: relative;
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  gap: 5rem;
+}
+
+.value_item {
+  position: absolute;
+  width: 50%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  place-content: center;
+  place-items: center;
+  transform: translateY(-150px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+  gap: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.value_item::after {
+  content: "";
+  font-size: 1.5rem;
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  font-weight: 700;
+  background: -webkit-linear-gradient(#23225a, #9a222f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.value_item:nth-of-type(1):after {
+  content: "01. Innovation";
+}
+
+.value_item:nth-of-type(2):after {
+  content: "02. Integrity";
+}
+
+.value_item:nth-of-type(3):after {
+  content: "03. Loyalty";
+}
+
+.value_item:nth-of-type(4):after {
+  content: "04. Collaboration";
+}
+
+.value_item:nth-of-type(5):after {
+  content: "05. Owenership";
+}
+
+.values_active {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.value_item--image {
+  position: relative;
+  width: 15%;
+}
+
+.value_item--description {
+  position: relative;
+  width: 80%;
+  text-align: center;
+}
+
+.icons_nextprev {
+  position: absolute;
+  font-size: 3rem;
+  background: -webkit-linear-gradient(#23225a, #9a222f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.next {
+  right: 5%;
+}
+
+.prev {
+  left: 5%;
+}
+
+.responsibility {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  gap: 2.5rem;
+}
+
+.responsibility--introduction {
+  position: relative;
+  width: 50%;
+  text-align: center;
+  font-weight: 600;
+}
+
+.responsibility_involvement,
+.responsibility_wellbeing,
+.responsibility_awareness {
+  position: relative;
+  width: 100%;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  gap: 1rem;
+}
+
+.responsibility_involvement--image,
+.responsibility_wellbeing--image,
+.responsibility_awareness--image {
+  position: relative;
+  width: 45%;
+  filter: grayscale(1);
+  transition: all 0.3s ease-out;
+}
+
+.responsibility_involvement:hover .responsibility_involvement--image,
+.responsibility_wellbeing:hover .responsibility_wellbeing--image,
+.responsibility_awareness:hover .responsibility_awareness--image {
+  filter: grayscale(0);
+}
+
+.responsibility_involvement--description,
+.responsibility_wellbeing--description,
+.responsibility_awareness--description {
+  position: relative;
+  width: 45%;
+}
+
+.responsibility_involvement--description,
+.responsibility_wellbeing--description,
+.responsibility_awareness--description {
+  position: relative;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: start;
+  gap: 1rem;
+}
+
+.responsibility_involvement--description h3,
+.responsibility_wellbeing--description h3,
+.responsibility_awareness--description h3 {
+  color: #23225a;
+  background: -webkit-linear-gradient(#23225a, rgb(154, 34, 47));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+}
+
+.awareness_button {
+  width: 50%;
+  margin: 3rem 0;
+  place-self: center;
+}
+
+.awareness_button {
+  position: relative;
+  padding: 1rem;
+}
+
+.awareness_button {
+  align-items: center;
+  background-image: var(--gradient);
+  border: 0;
+  box-shadow: var(--secondary_color) 0 5px 10px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: center;
+  line-height: 1em;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.awareness_button:active,
+.awareness_button:hover {
+  outline: 0;
+}
+
+.awareness_button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  width: 100%;
+  height: 100%;
+  transition: 200ms;
+}
+
+.awareness_button:hover span {
+  background: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .mission_section--title {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .main_header {
+    height: 90vh;
+  }
+
+  .main_header--title {
+    width: 70%;
+    font-size: 3.5rem;
+  }
+
+  .mission_section--image .blob2 {
+    bottom: 70%;
+  }
+
+  .responsibility_involvement {
+    flex-direction: column;
+  }
+
+  .responsibility_wellbeing {
+    flex-direction: column-reverse;
+  }
+
+  .responsibility_awareness {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .main_header {
+    height: 80vh;
+  }
+
+  .main_header--title {
+    font-size: 3rem;
+  }
+
+  .we_are--items {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .we_are--image {
+    width: 80%;
+  }
+
+  .we_are--catchline {
+    width: 70%;
+  }
+
+  .mission_section--image .blob2 {
+    bottom: 80%;
+  }
+
+  .vision_items {
+    flex-direction: column;
+  }
+
+  .vision_image {
+    width: 80%;
+  }
+
+  .vision_description {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mission_section--image .blob2 {
+    bottom: 80%;
+  }
+
+  .responsibility_involvement--image,
+  .responsibility_wellbeing--image,
+  .responsibility_awareness--image {
+    width: 90%;
+  }
+
+  .responsibility_involvement--description,
+  .responsibility_wellbeing--description,
+  .responsibility_awareness--description {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .blob,
+  .blob2 {
+    display: none;
+  }
+
+  .mission_section--title {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .mission_section--image .blob {
+    display: block;
+    bottom: -5%;
+    right: -5%;
+  }
+
+  .mission_section--image .blob2 {
+    display: block;
+    top: -5%;
+    left: -5%;
+  }
+
+  .main_header--title {
+    font-size: 2rem;
+  }
+
+  .values_items {
+    height: 50vh;
+  }
+
+  .value_item {
+    width: 70%;
+    padding: 2rem;
+    gap: 0.5rem;
+  }
+
+  .value_item::after {
+    font-size: 1rem;
+  }
+
+  .value_item--description {
+    font-size: 0.8rem;
+  }
+
+  .icons_nextprev {
+    font-size: 1.5rem;
+  }
+
+  .we_are--title,
+  .mission--title,
+  .vision--title,
+  .responsibility--title {
+    font-size: 3rem;
+  }
+
+  .we_are--description,
+  .we_are--catchline,
+  .vision_description {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .main_header {
+    height: 60vh;
+    background-position: right;
+  }
+
+  .main_header--title {
+    font-size: 1.5rem;
+  }
+
+  .we_are--title,
+  .mission--title,
+  .vision--title,
+  .responsibility--title {
+    font-size: 2.2rem;
+  }
+}
