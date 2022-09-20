@@ -36,6 +36,7 @@
 
 .company_information {
   position: relative;
+  width: 100%;
   margin: 8rem 0;
   display: flex;
   flex-direction: column;
